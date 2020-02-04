@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true">
+
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/layout_panel" />
+
+        <LinearLayout
+            android:id="@+id/locationMarker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="30dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imguser"
+                android:layout_width="40.00dp"
+                android:layout_height="40.00dp"
+                android:layout_centerHorizontal="true"
+                android:src="@mipmap/current_position"
+                android:visibility="visible" />
+
+
+        </LinearLayout>
+
+
+    </FrameLayout>
+
+
+    <LinearLayout
+        android:id="@+id/destinationLayer"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:gravity="right"
+        android:orientation="horizontal">
+
+
+        <ImageView
+            android:id="@+id/mapfocus"
+            android:layout_width="40dp"
+            android:layout_height="40.00dp"
+            android:layout_gravity="right"
+            android:src="@mipmap/my_location"
+            android:visibility="visible"
+            />
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/Done"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary"
+        android:text="Start Tracking"
+        android:textColor="@android:color/white"
+        android:textSize="17dp"
+        android:layout_marginEnd="20.00dp"
+        android:layout_marginStart="20.00dp"
+        android:layout_marginBottom="20.00dp"
+        android:textStyle="bold" />
+
+
+
+</RelativeLayout>
